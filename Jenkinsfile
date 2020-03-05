@@ -45,7 +45,7 @@ pipeline {
             steps{
               script {
                 if(env.BuildSystem == 'GNU Autotools')
-                  sh 'make check -j'
+                  sh 'make check'
                 if(env.BuildSystem == 'CMake')
                   sh 'cd build && cmake --build . --target check'
               }
